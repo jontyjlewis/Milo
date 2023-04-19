@@ -3,16 +3,21 @@ using UnityEngine.SceneManagement;
 
 public class LevelChanger : MonoBehaviour
 {
+    public static LevelChanger instance;
     public Animator animator;
 
     private int levelToLoad;
 
-    void Update()
+    private void Awake()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    FadeToNextLevel();
-        //}
+        if (instance)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void FadeToNextLevel()
@@ -29,5 +34,6 @@ public class LevelChanger : MonoBehaviour
     public void OnFadeComplete()
     {
         SceneManager.LoadScene(levelToLoad);
+        animator.SetTrigger("FadeIn");
     }
 }
