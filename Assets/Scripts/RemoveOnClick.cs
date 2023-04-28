@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RemoveOnClick : MonoBehaviour
 {
     public List<GameObject> puppies;
+    public List<Sprite> expressions;
+    public Image milo;
     public GameObject continueButton;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,11 @@ public class RemoveOnClick : MonoBehaviour
                 continueButton.SetActive(true);
                 //Debug.Log("no more puppies :(");
             }
-            
+            if (puppies.Count > 0 && puppies.Count < 4)
+            {
+                expressions.RemoveAt(0);
+                milo.sprite = expressions[0];
+            }
         }
     }
 }
