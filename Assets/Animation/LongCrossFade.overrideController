@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LongCrossFade
+  m_Controller: {fileID: 9100000, guid: 136dc65eed3c8a34b802def54a76493f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 4af0c6125f404ca4599c8658bb7e4aba, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5032c71958275444d9011a228d93e253, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1ab271fcdf1b7574f9cf4923db448088, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6dbb8c8e45cde2e44b0f348ea6f1fab1, type: 2}

@@ -6,6 +6,7 @@ public class DragY : MonoBehaviour
 {
     private Vector3 lastPosition;
     public float moveSpeed = 1f;
+    public float scrollSpeed = 10f;
 
     [SerializeField] private GameObject lastPanel;
     private float initialPositionY;
@@ -21,14 +22,34 @@ public class DragY : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        // For Scrollwheel
+        // get the scroll wheel input
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+
+        // move up or down based on input
+        Vector3 position = transform.position;
+        position.y -= scrollInput * scrollSpeed;
+        
+        if(position.y <= initialPositionY)
+        {
+            position.y = initialPositionY;
+        }
+        else if (position.y >= -endPositionY)
+        {
+            position.y = -endPositionY;
+        }
+        transform.position = position;
+
+
+        // For Click and Drag
+        if (Input.GetMouseButtonDown(0))
         {
             lastPosition = Input.mousePosition;
         }
         if(Input.GetMouseButton(0))
         {
             Vector3 delta = Input.mousePosition - lastPosition;
-            float newY = transform.position.y - delta.y * Time.deltaTime * moveSpeed;
+            float newY = transform.position.y - delta.y * Time.deltaTime * (-moveSpeed);
             
             if (newY >= initialPositionY && newY <= -endPositionY)
             {

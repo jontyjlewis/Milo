@@ -8,6 +8,7 @@ public class ProgressBarController : MonoBehaviour, IPointerDownHandler, IPointe
 {
     [SerializeField] private Image fillImage;
     [SerializeField] private float decreaseSpeed = 0.5f;
+    private Button button;
 
     private bool isButtonPressed = false;
 
@@ -15,6 +16,7 @@ public class ProgressBarController : MonoBehaviour, IPointerDownHandler, IPointe
     void Start()
     {
         continueButton.SetActive(false);
+        button = GetComponent<Button>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -36,6 +38,7 @@ public class ProgressBarController : MonoBehaviour, IPointerDownHandler, IPointe
             {
                 Debug.Log("Bar Empty!");
                 continueButton.SetActive(true);
+                button.interactable = false;
             }
             else
             {
@@ -43,13 +46,4 @@ public class ProgressBarController : MonoBehaviour, IPointerDownHandler, IPointe
             }
         }
     }
-
-    //private void OnButtonPressed()
-    //{
-    //    isButtonPressed = true;
-    //}
-    //private void OnButtonReleased()
-    //{
-    //    isButtonPressed = false;
-    //}
 }

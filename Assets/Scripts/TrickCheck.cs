@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class TrickCheck : MonoBehaviour
 {
     public List<GameObject> trick;
     public GameObject continueButton;
+    public TMP_Text trickName;
+    public Image baseImage;
+    public Sprite newImage;
+
     // Start is called before the first frame update
     void Start()
     {
         continueButton.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        trickName = GetComponent<TMP_Text>();
     }
 
     public void checkComplete()
@@ -29,6 +30,8 @@ public class TrickCheck : MonoBehaviour
             }
         }
         Debug.Log("should see this on all correct");
+        trickName.text = "Good boy!";
         continueButton.SetActive(true);
+        baseImage.sprite = newImage;
     }
 }
