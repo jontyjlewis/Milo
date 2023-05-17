@@ -3551,6 +3551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  scrollSpeed: 10
   lastPanel: {fileID: 1452117578}
 --- !u!1 &891812819
 GameObject:
@@ -3989,6 +3990,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4652322159759644831, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7636868893003618774, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4085,6 +4090,11 @@ PrefabInstance:
 --- !u!224 &976991313 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7636868893003618774, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+  m_PrefabInstance: {fileID: 976991312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &976991314 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1921478182875869456, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
   m_PrefabInstance: {fileID: 976991312}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1056428812
@@ -6721,6 +6731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  scrollSpeed: 10
   lastPanel: {fileID: 251952081}
 --- !u!1 &1878535041
 GameObject:
@@ -6962,6 +6973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  scrollSpeed: 10
   lastPanel: {fileID: 1762547172}
 --- !u!1 &1947252314
 GameObject:
@@ -7624,7 +7636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd767d44419eb3e4285871efd8fdeae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
+  transition: {fileID: 976991314}
   transitionTime: 1
 --- !u!1 &2139894482
 GameObject:
