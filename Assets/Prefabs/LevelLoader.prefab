@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5284550663643983492}
   - component: {fileID: 3522110515197590509}
   - component: {fileID: 4386309392580607478}
+  - component: {fileID: 5666144382140956461}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -76,6 +77,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &5666144382140956461
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137422046895993624}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &941464901423321167
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +191,7 @@ Animator:
   m_GameObject: {fileID: 1755231502588126704}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 136dc65eed3c8a34b802def54a76493f, type: 2}
+  m_Controller: {fileID: 22100000, guid: d3ee5adfc02630b4da5efb83ef40aec4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -237,7 +250,7 @@ Animator:
   m_GameObject: {fileID: 4652322159759644831}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 136dc65eed3c8a34b802def54a76493f, type: 2}
+  m_Controller: {fileID: 22100000, guid: f48ab26ed190c5e42af05ec2f71cf168, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

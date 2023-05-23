@@ -2189,6 +2189,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3852943085944924607, guid: 960407797519e7544a2e40a259016248, type: 3}
   m_PrefabInstance: {fileID: 1899429022}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &260387475 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 461454083331766162, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+  m_PrefabInstance: {fileID: 1496747920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &260964822
 GameObject:
   m_ObjectHideFlags: 0
@@ -8694,10 +8699,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 1755231502588126704, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4652322159759644831, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7589501033662787417, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 260387475}
     - target: {fileID: 7636868893003618774, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8784,7 +8797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8927578824118101510, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
