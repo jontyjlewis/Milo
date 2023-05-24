@@ -4092,11 +4092,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7636868893003618774, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
   m_PrefabInstance: {fileID: 976991312}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &976991314 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1921478182875869456, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+--- !u!114 &976991314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 382733180120183622, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
   m_PrefabInstance: {fileID: 976991312}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca084eb172602742a6421e168166172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1056428812
 GameObject:
   m_ObjectHideFlags: 0
@@ -7502,7 +7508,6 @@ GameObject:
   - component: {fileID: 2136872791}
   - component: {fileID: 2136872790}
   - component: {fileID: 2136872789}
-  - component: {fileID: 2136872792}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -7574,9 +7579,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2136872792}
-        m_TargetAssemblyTypeName: NextScene, Assembly-CSharp
-        m_MethodName: nextScene
+      - m_Target: {fileID: 976991314}
+        m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
+        m_MethodName: nextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7624,20 +7629,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136872787}
   m_CullTransparentMesh: 1
---- !u!114 &2136872792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136872787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd767d44419eb3e4285871efd8fdeae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transition: {fileID: 976991314}
-  transitionTime: 1
 --- !u!1 &2139894482
 GameObject:
   m_ObjectHideFlags: 0

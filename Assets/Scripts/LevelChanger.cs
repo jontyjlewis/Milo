@@ -1,10 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelChanger : MonoBehaviour
 {
     public static LevelChanger instance;
+
     public Animator animator;
+    public AudioSource bgMusic;
+    public float transitionTime = 1f;
 
     private int levelToLoad;
 
@@ -18,11 +23,20 @@ public class LevelChanger : MonoBehaviour
         {
             instance = this;
         }
+        // StartCoroutine(AudioFader.FadeIn(bgMusic, 0.5f));
     }
 
-    public void FadeToNextLevel()
+    public void nextLevel()
     {
-        FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadScene(int sceneIndex)
+    {
+        animator.SetTrigger("Start");
+        StartCoroutine(AudioFader.FadeOut(bgMusic, 0.8f));
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(sceneIndex);
     }
 
     public void FadeToLevel (int levelIndex)
