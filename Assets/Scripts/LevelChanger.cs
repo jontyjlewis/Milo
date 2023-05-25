@@ -39,15 +39,16 @@ public class LevelChanger : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    public void FadeToLevel (int levelIndex)
+    public void ExitGame()
     {
-        levelToLoad = levelIndex;
-        animator.SetTrigger("FadeOut");
+        StartCoroutine(CloseGame());
+        
     }
 
-    public void OnFadeComplete()
+    IEnumerator CloseGame()
     {
-        SceneManager.LoadScene(levelToLoad);
-        animator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(1f);
+        Application.Quit();
+        Debug.Log("Quit Game!");
     }
 }

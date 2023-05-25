@@ -696,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   scrollSpeed: 10
-  lastPanel: {fileID: 0}
+  lastPanel: {fileID: 2129184494}
 --- !u!1 &126437909
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +873,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126437909}
   m_CullTransparentMesh: 1
+--- !u!95 &127046282 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1921478182875869456, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+  m_PrefabInstance: {fileID: 275928440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &150366504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,6 +1656,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 577462474}
     m_Modifications:
+    - target: {fileID: 382733180120183622, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 127046282}
     - target: {fileID: 941464901423321167, guid: bb1d5064919ba2e4ab99e604cedac607, type: 3}
       propertyPath: m_Name
       value: LevelLoader
