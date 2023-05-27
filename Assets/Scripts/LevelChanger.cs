@@ -51,4 +51,9 @@ public class LevelChanger : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit Game!");
     }
+
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene("Title");
+    }
 }
