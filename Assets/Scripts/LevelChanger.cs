@@ -56,4 +56,32 @@ public class LevelChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
+
+    public void LoadActName(string actName)
+    {
+        //SceneManager.LoadScene(actName);
+        StartCoroutine(LoadSceneName(actName));
+    }
+
+    IEnumerator LoadSceneName(string actName)
+    {
+        animator.SetTrigger("Start");
+        StartCoroutine(AudioFader.FadeOut(bgMusic, 0.8f));
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(actName);
+    }
+
+    public void ActFade(GameObject currentAct, GameObject nextAct)
+    {
+        StartCoroutine(ActFadeHandler(currentAct, nextAct));
+    }
+
+    IEnumerator ActFadeHandler(GameObject currentAct, GameObject nextAct)
+    {
+        animator.SetTrigger("Start");
+        yield return new WaitForSeconds(2);
+        animator.SetTrigger("End");
+        currentAct.SetActive(false);
+        nextAct.SetActive(true);
+    }
 }
