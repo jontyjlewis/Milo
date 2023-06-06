@@ -31,7 +31,7 @@ public class RemoveOnClick : MonoBehaviour
                 continueButton.SetActive(true);
                 //Debug.Log("no more puppies :(");
             }
-            if (puppies.Count > 0 && puppies.Count < 4)
+            if (puppies.Count >= 0 && puppies.Count < 4)
             {
                 expressions.RemoveAt(0);
                 milo.sprite = expressions[0];
