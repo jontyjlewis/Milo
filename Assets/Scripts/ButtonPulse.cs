@@ -10,11 +10,12 @@ public class ButtonPulse : MonoBehaviour
     public float pulseDuration = 1f;
     public float pulseScale = 1.2f;
 
+    private Coroutine startPulseCoroutine;
     private Coroutine pulseCoroutine;
 
     private void Start()
     {
-        StartCoroutine(StartPulseAfterDelay());
+        startPulseCoroutine = StartCoroutine(StartPulseAfterDelay());
     }
 
     private IEnumerator StartPulseAfterDelay()
@@ -52,6 +53,7 @@ public class ButtonPulse : MonoBehaviour
 
     public void StopPulse()
     {
+        StopCoroutine(startPulseCoroutine);
         StopCoroutine(pulseCoroutine);
         button.transform.localScale = new Vector3(1f, 1f, 1f);
     }
