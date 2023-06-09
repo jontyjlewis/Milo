@@ -11,6 +11,7 @@ public class TrickCheck : MonoBehaviour
     public TMP_Text trickName;
     public Image baseImage;
     public Sprite newImage;
+    public AudioSource sfx;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,8 @@ public class TrickCheck : MonoBehaviour
         }
         Debug.Log("should see this on all correct");
         trickName.text = "Good boy!";
+        if(sfx != null)
+            sfx.Play();
         continueButton.SetActive(true);
         baseImage.sprite = newImage;
     }

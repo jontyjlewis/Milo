@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EndFrame
+  - sfx2
+  - sfx3
   layers:
   - Default
   - TransparentFX
